@@ -63,7 +63,7 @@ def index():
             .hero h1 { font-size: 42px; font-weight: 900; margin-bottom: 16px; line-height: 1.2; }
             .hero h1 span { color: #ff6b6b; }
             .hero p { font-size: 16px; color: #94a3b8; line-height: 1.8; max-width: 560px; margin: 0 auto 40px; }
-            .hero .warning-box { background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.3); border-radius: 8px; padding: 12px 20px; font-size: 13px; color: #fca5a5; max-width: 560px; margin: 0 auto; }
+            .hero .warning-box { background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.3); border-radius: 8px; padding: 12px 20px; font-size: 13px; color: #fca5a5; max-width: 560px; margin: 0 auto;  white-space: nowrap; }
             .section { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
             .section-title { font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #e2e8f0; }
             .section-title span { color: #667eea; }
@@ -349,6 +349,7 @@ def login():
             return json_response({"status": "error", "message": str(e)})
 
     html = """
+    <title>로그인</title>
     <style>
         body { font-family: Arial; background: #f5f5f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
         .login-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 320px; }
@@ -394,6 +395,7 @@ def board():
     cookie_password = request.cookies.get('password', '없음')
 
     html = f"""
+    <title>게시판</title>
     <style>
         body {{ font-family: Arial; max-width: 700px; margin: 40px auto; padding: 0 20px; }}
         h2 {{ color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }}
@@ -450,6 +452,7 @@ def transfer():
     """ for a in accounts])
 
     html = """
+    <title>송금</title>
     <style>
         body { font-family: Arial; max-width: 500px; margin: 40px auto; padding: 0 20px; }
         h2 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }
@@ -633,6 +636,7 @@ def bruteforce():
         })
 
     html = """
+    <title>Brute Force 공격 실습</title>
     <style>
         body { font-family: Arial; max-width: 600px; margin: 40px auto; padding: 0 20px; }
         h2 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }
