@@ -219,11 +219,11 @@ chulsoo  / kim5678    / 010-1111-2222
 vulnerable_site/
 ├── docker-compose.yml
 ├── README.md
-├── frontend/               ← 사이트 A (학습)
+├── site_A/               ← 사이트 A (학습)
 │   ├── src/
 │   ├── package.json
 │   └── Dockerfile
-└── backend/                ← 사이트 B (실습)
+└── site_B/                ← 사이트 B (실습)
     ├── app.py
     ├── requirements.txt
     └── Dockerfile
@@ -254,7 +254,7 @@ vulnerable_site/
 | 이름 | 역할 |
 |------|------|
 |  본인 | 백엔드 + 취약점 구현 (Python/Flask) |
-| **팀원1,2| 프론트엔드 (React + TypeScript) |
+| 팀원 1, 2| 프론트엔드 (React + TypeScript) |
 
 ---
 
